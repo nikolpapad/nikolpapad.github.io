@@ -13,9 +13,6 @@ Follow me as I navigate through learning about GenAI, Robotics, and everything i
 ### 🧵 Project 1 – Crochet patterns
 Creative pattern designs combining art and structure.
 
-### 🎨 Project 2 – Custom website theme
-Experimenting with styling and layouts for personal websites.
-
 ### 🤖 Project 3 – Experimenting with CycleGANs ;)
 Exploring image-to-image translation using generative models.
 
