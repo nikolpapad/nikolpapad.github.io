@@ -13,8 +13,8 @@ Follow me as I navigate through learning about GenAI, Robotics, and everything i
 ### 🧵 Project 1 – Crochet patterns
 Creative pattern designs combining art and structure.
 
-### 🤖 Project 3 – Experimenting with CycleGANs ;)
-Exploring image-to-image translation using generative models.
+### 🤖 Project 2 – Experimenting with CycleGANs ;)
+Exploring image-to-image translation using generative models through Kaggle competitions. 
 
 ---
 
