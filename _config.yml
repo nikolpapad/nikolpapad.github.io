@@ -1,3 +1,20 @@
 theme: jekyll-theme-minimal
 title: Nikoleta Papadopoulou
 description: Bookmark this to keep an eye on my project updates!
+
+## 👋 About Me
+Follow me as I navigate through learning about GenAI, Robotics and everything in between. 
+## 🚀 My Projects
+- **Project 1** – Crochet patterns
+- **Project 2** – Custom website theme.
+- **Project 3** – Experimenting with CycleGANs ;) 
+
+## 📬 Contact
+Feel free to reach out at: nikolpanpap@gmail.com
+
+# Add navigation
+nav:
+  - Home: /
+  - Projects: /projects/
+  - About: /about/
+
