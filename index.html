@@ -178,6 +178,21 @@
       margin: 0.75rem auto;
       border-radius: 0.5rem;
     }
+
+    .media-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; /* stacks on mobile */
+    }
+
+    .media-row img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 0.5rem;
+    }
+
   </style>
 </head>
 <body>
@@ -229,21 +244,16 @@
             was performed through a dedicated pipeline tailored to label the IMU tap events and various use cases.</br>
             The model development was carried out using TensorFlow/Keras for training and tuning and InvenSense’s
             internal MLtools framework for quantization and evaluation of the final model on the embedded device.
+            <br>
+            Results of the best model as well as a live testing demo can be seen below:
             </p>
-            <p><strong>Results:</strong></p>
-            <ul>
-              <li>No events: 91%</li>
-              <li>Double Tap: 95%</li>
-              <li>Triple Tap: 92%</li>
-              <li>F1-Score (Triple Tap): 89.7%</li>
-            </ul>
 
-            <img
-              src="assets/tap.gif"
-              alt="Live Testing for Tap detection on face"
-              class="project-gif"
-            >
+            <div class="media-row">
+              <img src="assets/tap.gif" alt="Live Testing for Tap detection on face" class="project-gif">
+              <img src="assets/conf_matrix.PNG" alt="CF_results" class="project-gif">
+            </div>
 
+            
             <div class="tag-list">
               <span class="tag">Python</span>
               <span class="tag">C</span>
