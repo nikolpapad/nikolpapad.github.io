@@ -260,7 +260,7 @@
     <section id="projects">
       <h2>Projects</h2>
       
-      <!-- 🔹 FIRST: Full-width project -->
+      <!-- 🔹 FIRST: Full-width project
         <div class="projects">
           <article class="project-card full-width">
             <h3>Using Deep Learning for Gesture Detection with Accelerometer Data</h3>
@@ -303,8 +303,97 @@
               <span class="tag">Signal Processing</span>
             </div>
           </article>
-        </div>
+        </div> -->
 
+
+        <!----------------------------------------------------------------->
+        <div class="projects">
+  <article class="project-card full-width">
+    <h3>Deep Learning for Gesture Detection from IMU Time-Series</h3>
+
+    <p>
+      Designed, trained, and evaluated deep neural networks for detecting facial tap gestures
+      from raw accelerometer data. The final architecture combined
+      <strong>CNN layers</strong> for temporal feature extraction with
+      <strong>recurrent layers</strong> for sequential pattern modeling.
+    </p>
+
+    <p>
+      The dataset required extensive preprocessing, including
+      <strong>filtering, normalization, and data cleaning</strong>.
+      Event-based segmentation was applied, where users performed
+      different tap gestures across multiple real-world use cases
+      (static and in-motion scenarios).
+    </p>
+
+    <p>
+      Model development was carried out using <strong>TensorFlow/Keras</strong>.
+      <strong>TensorBoard</strong> was used extensively to monitor training dynamics,
+      tune hyperparameters, and assess the impact of regularization techniques.
+      The final model was <strong>quantized and evaluated on-device</strong>
+      using the company’s internal MLtools framework.
+    </p>
+
+    <h4>Key Challenges</h4>
+    <ul>
+      <li>
+        Highly imbalanced dataset — tap events were extremely short compared
+        to the dominant “no-event” class
+      </li>
+      <li>
+        Strong inter-user variability in how facial tap gestures were performed
+      </li>
+      <li>
+        Data inconsistencies across different usage scenarios
+      </li>
+      <li>
+        Strict constraints on model size, latency, and false accept rate
+        for embedded deployment
+      </li>
+    </ul>
+
+    <h4>Solutions</h4>
+    <ul>
+      <li>
+        Introduced noise-based data augmentation and imbalance-aware handling strategies
+      </li>
+      <li>
+        Performed extensive hyperparameter searches across architectures and window sizes
+      </li>
+      <li>
+        Applied multiple regularization techniques to improve generalization
+      </li>
+      <li>
+        Optimized the final model for robustness and memory efficiency prior to quantization
+      </li>
+    </ul>
+
+    <div class="media-row">
+      <figure>
+        <img src="assets/tap.gif" alt="Live testing demo" class="gif">
+        <figcaption>Live on-device gesture detection demo</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/conf_matrix.PNG" alt="Confusion matrix results" class="image">
+        <figcaption>Confusion matrix of best-performing model</figcaption>
+      </figure>
+    </div>
+
+    <div class="tag-list">
+      <span class="tag">Python</span>
+      <span class="tag">TensorFlow / Keras</span>
+      <span class="tag">CNN</span>
+      <span class="tag">RNN</span>
+      <span class="tag">Time-Series</span>
+      <span class="tag">Signal Processing</span>
+      <span class="tag">Embedded ML</span>
+    </div>
+  </article>
+</div>
+
+        <!--------------------------------------------------------------------->
+        
   <!-- 🔹 SECOND: Two projects side by side -->
   <div class="projects" style="margin-top: 1.5rem;">
 
