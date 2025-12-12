@@ -184,14 +184,29 @@
       gap: 1rem;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap; /* stacks on mobile */
+      flex-wrap: wrap;
     }
 
-    .media-row img {
-      width: 100%;
-      max-width: 180px;
-      border-radius: 0.25rem;
+    /* shared media rules */
+    .media-row img,
+    .media-row video {
+      height: auto;
+      border-radius: 0.5rem;
+      object-fit: contain;
     }
+
+    /* GIF slightly larger */
+    .media-row .gif {
+      max-width: 420px;
+      width: 100%;
+    }
+
+    /* Image slightly smaller */
+    .media-row .image {
+      max-width: 320px;
+      width: 100%;
+    }
+
 
   </style>
 </head>
