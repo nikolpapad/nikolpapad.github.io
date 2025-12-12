@@ -266,15 +266,24 @@
             <h3>Using Deep Learning for Gesture Detection with Accelerometer Data</h3>
 
             <p>
-            This project included designing, training, and evaluating multiple DNN architectures that combine CNN and recurrent layers. 
-            The original database required extensive preprocessing, including <strong>filtering, normalization</strong> and in certain cases <strong>data cleanign</strong>. Data segmentation 
-            was performed through a dedicated pipeline tailored to label the IMU tap events and various use cases.</br>
-            The model development was carried out using TensorFlow/Keras for training and tuning and InvenSense’s
-            internal MLtools framework for quantization and evaluation of the final model on the embedded device.
-            <br>
-            Results of the best model as well as a live testing demo can be seen below:
+            This project included designing, training, and evaluating multiple DNN architectures that combine CNN (for temporal feature extraction) and recurrent layers (for pattern modeling). 
+            → The original database required extensive preprocessing, including <strong>filtering, normalization</strong> and in certain cases <strong>data cleaning</strong>.<br> 
+            → Data segmentation was event based, where users performed different types of taps on the face for a number of different use cases both static and moving.</br>
+            → The model development was carried out using TensorFlow/Keras for training, tuning and TensorBoard was especially useful when tuning hyperparameters and deciding on the effect of regularization techniques.<br>
+            → The company's internal MLtools framework was used for the quantization and evaluation of the final model on the embedded device.<br>
             </p>
-
+            <p>
+              <strong>Challenges?
+                <lst>
+                  <li> Highly imbalanced dataset (Tap events are of extremely small duration Vs the "Nothing happens class")</li>
+                  <li> Strong inter user variability (people have different interprentations of a facial tap)</li>
+                  <li> Data inconsistency across use cases </li>
+                  <li> Need for a small memory efficient model with strong robustness against false accepts</li>
+                <p><strong>Solutions:</strong> introduced noise-based data augmentation and handling methods for class imbalance, 
+                  run extensive hyperparameter searches and applied multiple regularization techniques to prevent overfitting</p>
+                </lst>
+              </strong>
+            </p>
             <div class="media-row">
               <figure>
                 <img src="assets/tap.gif" alt="Live Testing for Tap detection on face" class="gif" >
