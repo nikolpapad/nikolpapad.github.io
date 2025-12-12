@@ -217,12 +217,18 @@ solutions into production
         <article class="project-card">
           <h3>Using Deep Learning for gesture detection with accelerometer data</h3>
           <p>
-         This project included designing, training, and evaluating multiple DNN architectures that combine convolutional and recurrent layers. 
-            The original DB required extensive preprocessing, including filtering, normalization and in certain cases data cleaning, before segmentation 
-            through a dedicated preprocessing pipeline tailored to label the IMU tap events and various use cases.</br></br>
+         This project included designing, training, and evaluating multiple DNN architectures that combine CNN and Recurrent layers. 
+            The original DB required extensive preprocessing, including filtering, normalization and in certain cases data cleaning. Data segmentation 
+            was performed through a dedicated pipeline tailored to label the IMU tap events and various use cases.</br>
             The model development was carried out using TensorFlow/Keras for training and tuning and InvenSense’s
           internal MLtools framework for quantization and evaluation of the final model on the embedded device.<br>
-          <b>Results:</b> over 90% performace on all classes and use cases. 
+          <b>Results:</b> over 90% performace on all classes and use cases:
+          </lst>
+            <li>No events:  91%</li>
+            <li>Double Tap: 95%</li>
+            <li>Triple Tap: 92% </li>
+            <li>F1-Score for Triple Tap: 89.7%</li>
+          <img src="tap.gif" alt="Live Testing for Tap detection on face" style="width:150px;height:150px;">
         </p>
           <p><strong>Role:</strong> What you did (e.g. design, frontend, backend).</p>
           <div class="tag-list">
