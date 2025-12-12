@@ -220,7 +220,7 @@ solutions into production
 
     <section id="projects">
       <h2>Projects</h2>
-      <div class="projects">
+      <!-- <div class="projects">
         <article class="project-card">
           <h3>Using Deep Learning for gesture detection with accelerometer data</h3>
           <p>
@@ -265,7 +265,94 @@ solutions into production
             <span class="tag">Image Processing</span>
           </div>
         </article>
+      </div> -->
+      <section id="projects">
+  <h2>Projects</h2>
+
+  <!-- 🔹 FIRST: Full-width Deep Learning project -->
+  <div class="projects">
+    <article class="project-card full-width">
+      <h3>Using Deep Learning for Gesture Detection with Accelerometer Data</h3>
+
+      <p>
+        This project included designing, training, and evaluating multiple DNN architectures that combine
+        CNN and recurrent layers. The dataset required extensive preprocessing including filtering,
+        normalization, and data cleaning. Data segmentation was handled through a dedicated pipeline
+        tailored to label IMU tap events.
+      </p>
+
+      <p><strong>Results:</strong></p>
+      <ul>
+        <li>No events: 91%</li>
+        <li>Double Tap: 95%</li>
+        <li>Triple Tap: 92%</li>
+        <li>F1-Score (Triple Tap): 89.7%</li>
+      </ul>
+
+      <img
+        src="assets/tap.gif"
+        alt="Live Testing for Tap detection on face"
+        class="project-gif"
+      >
+
+      <div class="tag-list">
+        <span class="tag">Python</span>
+        <span class="tag">C</span>
+        <span class="tag">TensorFlow/Keras</span>
       </div>
+    </article>
+  </div>
+
+  <!-- 🔹 SECOND: Two projects side by side -->
+  <div class="projects" style="margin-top: 1.5rem;">
+
+    <article class="project-card">
+      <h3>
+        Ongoing Project: Using Computer Vision for Reviving Old Crochet Patterns (1910s)
+      </h3>
+
+      <p>
+        Developed a computer vision pipeline using OpenCV and Python to extract grid-based patterns
+        from scanned vintage crochet designs. The goal is to generate clear, line-by-line instructions
+        enabling modern recreations.
+      </p>
+
+      <p>
+        <strong>Next:</strong> Build a free website with a curated library of
+        <em>verified</em> reconstructed patterns.
+      </p>
+
+      <div class="tag-list">
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Python</span>
+        <span class="tag">OpenCV</span>
+        <span class="tag">Image Processing</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h3>Development of Quadruped Robot</h3>
+
+      <p>
+        OpenQuadruped / SpotMiniMini is a low-cost, open-source quadruped robot with a fully 3D-printed
+        frame, ROS Noetic integration, IMU sensing, and Bézier-curve–based gait modulation.
+      </p>
+
+      <img
+        src="assets/spot_mini_mini.gif"
+        alt="SpotMiniMini Robot"
+        class="project-gif"
+      >
+
+      <div class="tag-list">
+        <span class="tag">Python</span>
+        <span class="tag">C++</span>
+        <span class="tag">ROS</span>
+      </div>
+    </article>
+
+  </div>
+</section>
 
       <article class="project-card">
           <h3>Development of Quadruped Robot</h3>
