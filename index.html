@@ -220,88 +220,40 @@ solutions into production
 
     <section id="projects">
       <h2>Projects</h2>
-      <!-- <div class="projects">
-        <article class="project-card">
-          <h3>Using Deep Learning for gesture detection with accelerometer data</h3>
-          <p>
-         This project included designing, training, and evaluating multiple DNN architectures that combine CNN and Recurrent layers. 
+      <section id="projects">
+        <div class="projects">
+          <article class="project-card full-width">
+            <h3>Using Deep Learning for Gesture Detection with Accelerometer Data</h3>
+
+            <p>
+            This project included designing, training, and evaluating multiple DNN architectures that combine CNN and Recurrent layers. 
             The original DB required extensive preprocessing, including filtering, normalization and in certain cases data cleaning. Data segmentation 
             was performed through a dedicated pipeline tailored to label the IMU tap events and various use cases.</br>
             The model development was carried out using TensorFlow/Keras for training and tuning and InvenSense’s
-          internal MLtools framework for quantization and evaluation of the final model on the embedded device.<br>
-          
-          </lst>
-            <b>Results:</b> over 90% performace on all classes and use cases:
-            <li>No events:  91%</li>
-            <li>Double Tap: 95%</li>
-            <li>Triple Tap: 92% </li>
-            <li>F1-Score for Triple Tap: 89.7%</li>
-          <img src="assets/tap.gif" alt="Live Testing for Tap detection on face"  class="project-gif" >
-        </p>
-          
-          <div class="tag-list">
-            <span class="tag">Python</span>
-            <span class="tag">C</span>
-            <span class="tag">TensorFlow/Keras</span>
-          </div>
-        </article>
+            internal MLtools framework for quantization and evaluation of the final model on the embedded device.
+            </p>
+            <ul>
+              <p><strong>Results:</strong></p>
+              <li>No events: 91%</li>
+              <li>Double Tap: 95%</li>
+              <li>Triple Tap: 92%</li>
+              <li>F1-Score (Triple Tap): 89.7%</li>
+            </ul>
 
-        <article class="project-card">
-          <h3>Ongoing Project: Using Computer Vision for Reviving old Crochet Patterns from 1910's</h3>
-          <p>
-          Developed a computer vision pipeline using OpenCV and Python to extract grid-based patterns from scanned vintage crochet designs.
-          The goal is to generate clear, line-by-line instructions that enable modern crocheters to recreate historic patterns.
-          Potential extensions include applications to knitting, mosaics, and other binary (0–1) pattern-based designs. <br></br>
-          
-          <p>
-          <strong>Next:</strong> Build a free website with a curated library of <em>verified</em> patterns with only designs where the
-          extracted instructions have been validated for accuracy. (Optional future feature: user uploads in beta.)
-        </p>
-        </p>
-          <div class="tag-list">
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Python</span>
-            <span class="tag">OpenCV</span>
-            <span class="tag">Image Processing</span>
-          </div>
-        </article>
-      </div> -->
-      <section id="projects">
-  <h2>Projects</h2>
+            <img
+              src="assets/tap.gif"
+              alt="Live Testing for Tap detection on face"
+              class="project-gif"
+            >
 
-  <!-- 🔹 FIRST: Full-width Deep Learning project -->
-  <div class="projects">
-    <article class="project-card full-width">
-      <h3>Using Deep Learning for Gesture Detection with Accelerometer Data</h3>
-
-      <p>
-        This project included designing, training, and evaluating multiple DNN architectures that combine
-        CNN and recurrent layers. The dataset required extensive preprocessing including filtering,
-        normalization, and data cleaning. Data segmentation was handled through a dedicated pipeline
-        tailored to label IMU tap events.
-      </p>
-
-      <p><strong>Results:</strong></p>
-      <ul>
-        <li>No events: 91%</li>
-        <li>Double Tap: 95%</li>
-        <li>Triple Tap: 92%</li>
-        <li>F1-Score (Triple Tap): 89.7%</li>
-      </ul>
-
-      <img
-        src="assets/tap.gif"
-        alt="Live Testing for Tap detection on face"
-        class="project-gif"
-      >
-
-      <div class="tag-list">
-        <span class="tag">Python</span>
-        <span class="tag">C</span>
-        <span class="tag">TensorFlow/Keras</span>
-      </div>
-    </article>
-  </div>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">C</span>
+              <span class="tag">TensorFlow/Keras</span>
+              <span class="tag">Signal Processing</span>
+            </div>
+          </article>
+        </div>
 
   <!-- 🔹 SECOND: Two projects side by side -->
   <div class="projects" style="margin-top: 1.5rem;">
@@ -312,10 +264,14 @@ solutions into production
       </h3>
 
       <p>
-        Developed a computer vision pipeline using OpenCV and Python to extract grid-based patterns
-        from scanned vintage crochet designs. The goal is to generate clear, line-by-line instructions
-        enabling modern recreations.
+        Developed a computer vision pipeline using OpenCV and Python to extract grid-based patterns from scanned vintage crochet designs.
+        The goal is to generate clear, line-by-line instructions that enable modern crocheters to recreate historic patterns.
+        Potential extensions include applications to knitting, mosaics, and other binary (0–1) pattern-based designs.
       </p>
+      <p>
+        <strong>Next:</strong> Build a free website with a curated library of <em>verified</em> patterns with only designs where the
+        extracted instructions have been validated for accuracy. (Optional future feature: user uploads in beta.)
+        </p>
 
       <p>
         <strong>Next:</strong> Build a free website with a curated library of
@@ -329,35 +285,13 @@ solutions into production
         <span class="tag">Image Processing</span>
       </div>
     </article>
-
-    <article class="project-card">
-      <h3>Development of Quadruped Robot</h3>
-
-      <p>
-        OpenQuadruped / SpotMiniMini is a low-cost, open-source quadruped robot with a fully 3D-printed
-        frame, ROS Noetic integration, IMU sensing, and Bézier-curve–based gait modulation.
-      </p>
-
-      <img
-        src="assets/spot_mini_mini.gif"
-        alt="SpotMiniMini Robot"
-        class="project-gif"
-      >
-
-      <div class="tag-list">
-        <span class="tag">Python</span>
-        <span class="tag">C++</span>
-        <span class="tag">ROS</span>
-      </div>
-    </article>
-
   </div>
 </section>
 
       <article class="project-card">
           <h3>Development of Quadruped Robot</h3>
           <p>
-            OpenQuadruped / SpotMiniMini is a low-cost, open-source quadruped robot inspired by Maurice Rahme’s work. 
+           OpenQuadruped / SpotMiniMini is a low-cost, open-source quadruped robot inspired by Maurice Rahme’s work. 
             It features a fully 3D-printed frame, 12 brushless actuators driving four 3-DOF legs, 
             and a lightweight leg design using a pulley–belt transmission. The robot runs on a Raspberry Pi with ROS Noetic, integrates IMU sensing and wireless joystick control, 
             and uses Bézier-curve–based gait modulation for locomotion.
@@ -369,7 +303,7 @@ solutions into production
             <span class="tag">C++</span>
             <span class="tag">ROS</span>
           </div>
-        </article>
+      </article>
       </div>
 
     </section>
