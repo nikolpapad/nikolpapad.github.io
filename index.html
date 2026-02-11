@@ -269,53 +269,6 @@
     <section id="projects">
       <h2>Projects</h2>
       
-      <!-- 🔹 FIRST: Full-width project
-        <div class="projects">
-          <article class="project-card full-width">
-            <h3>Using Deep Learning for Gesture Detection with Accelerometer Data</h3>
-
-            <p>
-            This project included designing, training, and evaluating multiple DNN architectures that combine CNN (for temporal feature extraction) and recurrent layers (for pattern modeling). 
-            → The original database required extensive preprocessing, including <strong>filtering, normalization</strong> and in certain cases <strong>data cleaning</strong>.<br> 
-            → Data segmentation was event based, where users performed different types of taps on the face for a number of different use cases both static and moving.</br>
-            → The model development was carried out using TensorFlow/Keras for training, tuning and TensorBoard was especially useful when tuning hyperparameters and deciding on the effect of regularization techniques.<br>
-            → The company's internal MLtools framework was used for the quantization and evaluation of the final model on the embedded device.<br>
-            </p>
-            <p>
-              <strong>Challenges?
-                <lst>
-                  <li> Highly imbalanced dataset (Tap events are of extremely small duration Vs the "Nothing happens class")</li>
-                  <li> Strong inter user variability (people have different interprentations of a facial tap)</li>
-                  <li> Data inconsistency across use cases </li>
-                  <li> Need for a small memory efficient model with strong robustness against false accepts</li>
-                <p><strong>Solutions:</strong> introduced noise-based data augmentation and handling methods for class imbalance, 
-                  run extensive hyperparameter searches and applied multiple regularization techniques to prevent overfitting</p>
-                </lst>
-              </strong>
-            </p>
-            <div class="media-row">
-              <figure>
-                <img src="assets/tap.gif" alt="Live Testing for Tap detection on face" class="gif" >
-                <figcaption>Live Testing Demo</figcaption>        
-              </figure>
-              <figure>
-                <img src="assets/conf_matrix.PNG" alt="CF_results" class="image">
-                <figcaption>Confusion Matrix of trained Model with Best Accuracy</figcaption>
-              </figure>
-            </div>
-
-            
-            <div class="tag-list">
-              <span class="tag">Python</span>
-              <span class="tag">C</span>
-              <span class="tag">TensorFlow/Keras</span>
-              <span class="tag">Signal Processing</span>
-            </div>
-          </article>
-        </div> -->
-
-
-        <!----------------------------------------------------------------->
         <div class="projects">
         <article class="project-card full-width">
           <h3>Deep Learning for Gesture Detection from IMU Time-Series</h3>
