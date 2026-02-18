@@ -94,6 +94,11 @@
       gap: 1.5rem;
     }
 
+    /* Fix: full-width card spans all columns */
+    .project-card.full-width {
+      grid-column: 1 / -1;
+    }
+
     .project-card {
       background: var(--bg-card);
       border-radius: 0.75rem;
@@ -171,6 +176,7 @@
       color: var(--muted);
       line-height: 1.6;
     }
+
     .project-gif {
       width: 65%;
       max-width: 720px;
@@ -187,7 +193,6 @@
       flex-wrap: wrap;
     }
 
-    /* shared media rules */
     .media-row img,
     .media-row video {
       height: auto;
@@ -195,13 +200,11 @@
       object-fit: contain;
     }
 
-    /* GIF slightly larger */
     .media-row .gif {
       max-width: 550px;
       width: 100%;
     }
 
-    /* Image slightly smaller */
     .media-row .image {
       max-width: 250px;
       width: 100%;
@@ -227,7 +230,12 @@
       margin-bottom: 0.6rem;
     }
 
-
+    /* About section list sits outside the p tag — give it muted color */
+    #about ul {
+      color: var(--muted);
+      padding-left: 1.5rem;
+      line-height: 1.7;
+    }
   </style>
 </head>
 <body>
@@ -244,32 +252,41 @@
 
     <div class="hero">
       <div class="name">Nikoleta Papadopoulou</div>
-        <div class="tagline">
-          Applied AI Engineer passionate about Deep learning, LLMs, and deploying AI solutions into production 
-        </div>
+      <div class="tagline">
+        Applied AI Engineer passionate about Deep learning, LLMs, and deploying AI solutions into production
+      </div>
     </div>
   </header>
+
   <main>
     <section id="about">
       <h2>About</h2>
-       <p>
-         Hi, I’m Nikoleta,  an engineer who’s still figuring out exactly where she wants to go, but knows she loves building things that move and models that learn. <br>
-         During my MEng thesis in Patras, Greece I built a 3D printed quadruped robot 🐕. Later, at Grenoble INP Ense3, I expanded into applications with ML, mobile robotics, and computer vision. 
-       </br>
-         I recently completed a Machine Learning Engineering internship at TDK InvenSense, where I built and trained a Neural Network 
-         from scratch to detect tap gestures from time-series accelerometer data for the development of a product feature of an IMU sensor. <br>
-         <ul>
-             <li>Stable Diffusion and generative image models on Hugging Face</li>
-             <li>Fine Tuning LLMs</li>
-            <li>Learning more about the ML Infrastructure</li>
-        </ul>
+      <!-- Fix: moved <ul> outside <p> — a block element cannot live inside an inline element -->
+      <p>
+        Hi, I'm Nikoleta, an engineer who's still figuring out exactly where she wants to go,
+        but knows she loves building things that move and models that learn.
+        During my MEng thesis in Patras, Greece I built a 3D printed quadruped robot 🐕.
+        Later, at Grenoble INP Ense3, I expanded into applications with ML, mobile robotics,
+        and computer vision.
       </p>
+      <p>
+        I recently completed a Machine Learning Engineering internship at TDK InvenSense, where
+        I built and trained a Neural Network from scratch to detect tap gestures from time-series
+        accelerometer data for the development of a product feature of an IMU sensor.
+      </p>
+      <p>Currently exploring:</p>
+      <ul>
+        <li>Stable Diffusion and generative image models on Hugging Face</li>
+        <li>Fine Tuning LLMs</li>
+        <li>Learning more about the ML Infrastructure</li>
+      </ul>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
-      
-        <div class="projects">
+
+      <!-- Project 1: full-width card (fix: added full-width CSS class definition above) -->
+      <div class="projects">
         <article class="project-card full-width">
           <h3>Deep Learning for Gesture Detection from IMU Time-Series</h3>
 
@@ -292,41 +309,23 @@
             <strong>TensorBoard</strong> was used to monitor training dynamics,
             tune hyperparameters, and assess the impact of regularization techniques.
             The final model was <strong>quantized and evaluated on-device</strong>
-            using the company’s internal MLtools framework.
+            using the company's internal MLtools framework.
           </p>
 
           <h4>Key Challenges</h4>
           <ul>
-            <li>
-              Highly imbalanced dataset — tap events were extremely short compared
-              to the dominant “no-event” class
-            </li>
-            <li>
-              Strong inter-user variability in how facial tap gestures were performed
-            </li>
-            <li>
-              Data inconsistencies across different usage scenarios
-            </li>
-            <li>
-              Strict constraints on model size, latency, and false accept rate
-              for embedded deployment
-            </li>
+            <li>Highly imbalanced dataset — tap events were extremely short compared to the dominant "no-event" class</li>
+            <li>Strong inter-user variability in how facial tap gestures were performed</li>
+            <li>Data inconsistencies across different usage scenarios</li>
+            <li>Strict constraints on model size, latency, and false accept rate for embedded deployment</li>
           </ul>
 
           <h4>Solutions</h4>
           <ul>
-            <li>
-              Introduced noise-based data augmentation and imbalance-aware handling strategies
-            </li>
-            <li>
-              Performed extensive hyperparameter searches across architectures and window sizes
-            </li>
-            <li>
-              Applied multiple regularization techniques to improve generalization
-            </li>
-            <li>
-              Optimized the final model for robustness and memory efficiency prior to quantization
-            </li>
+            <li>Introduced noise-based data augmentation and imbalance-aware handling strategies</li>
+            <li>Performed extensive hyperparameter searches across architectures and window sizes</li>
+            <li>Applied multiple regularization techniques to improve generalization</li>
+            <li>Optimized the final model for robustness and memory efficiency prior to quantization</li>
           </ul>
 
           <div class="media-row">
@@ -334,7 +333,6 @@
               <img src="assets/tap.gif" alt="Live testing demo" class="gif">
               <figcaption>Live on-device gesture detection demo</figcaption>
             </figure>
-
             <figure>
               <img src="assets/conf_matrix.PNG" alt="Confusion matrix results" class="image">
               <figcaption>Confusion matrix of best-performing model</figcaption>
@@ -353,78 +351,70 @@
         </article>
       </div>
 
-        <!--------------------------------------------------------------------->
-        
-  <!-- 🔹 SECOND: Two projects side by side -->
-  <div class="projects" style="margin-top: 1.5rem;">
+      <!-- Projects 2 & 3 side by side -->
+      <div class="projects" style="margin-top: 1.5rem;">
 
-      <h3>
-        Ongoing Project:
-        <a href="https://arachne-studio.com" target="_blank" rel="noopener noreferrer">
-          Arachne Studio
-        </a>
-      </h3>
+        <!-- Fix: added the missing opening <article> tag for Arachne Studio -->
+        <article class="project-card">
+          <h3>
+            Ongoing Project:
+            <a href="https://arachne-studio.com" target="_blank" rel="noopener noreferrer">
+              Arachne Studio
+            </a>
+          </h3>
 
+          <p>
+            Arachne Studio is a passion project turned web app for preserving and digitizing vintage
+            crochet patterns from early 20th-century documents. It uses computer vision to extract
+            grid-based patterns from historical PDFs and rebuilds them into clean, editable digital grids.
+          </p>
 
-      <p>
-        Arachne Studio is a passion project made into a web app application for preserving and digitizing vintage crochet patterns from early 20th-century documents. It uses computer vision to extract grid-based patterns from historical PDFs and rebuilds them into clean, editable digital grids.
-        Key features:
-
-        <ul>
-            <li>
-              Pattern browser — catalog of pre-extracted vintage patterns with category filtering, search, and pagination
-            </li>
-            <li>
-              Pattern detail & PDF download — configure extraction options (start corner, reading mode) and download a PDF with line-by-line instructions
-            </li>
-            <li>
-              Visual grid editor — a full-featured canvas editor with brush, fill, eyedropper, rectangle select, lasso, stickers (reusable pattern fragments), multi-color palette, undo/redo, flip/rotate, and a magnifier
-            </li>
-            <li>
-              Mobile-optimized editor — pinch-to-zoom, two-finger pan, long-press eyedropper with haptic feedback
-            </li>
-            <li>
-              My Corner — personal dashboard of your edited patterns
-            </li>
-            <li>
-              Auth-gated editing — Google OAuth to save edits per-user
-            </li>
+          <p>Key features:</p>
+          <ul>
+            <li>Pattern browser — catalog of pre-extracted vintage patterns with category filtering, search, and pagination</li>
+            <li>Pattern detail &amp; PDF download — configure extraction options and download a PDF with line-by-line instructions</li>
+            <li>Visual grid editor — canvas editor with brush, fill, eyedropper, rectangle select, lasso, stickers, multi-color palette, undo/redo, flip/rotate, and a magnifier</li>
+            <li>Mobile-optimized editor — pinch-to-zoom, two-finger pan, long-press eyedropper with haptic feedback</li>
+            <li>My Corner — personal dashboard of your edited patterns</li>
+            <li>Auth-gated editing — Google OAuth to save edits per-user</li>
           </ul>
-          The project is still in beta version and usage of the website and the patterns is highly encouraged as well as suggestions for improvements. c
+
+          <p>The project is still in beta — usage and suggestions for improvements are very welcome!</p>
+
           <img src="assets/arachne-demo.gif" alt="Arachne Studio Demo" class="project-gif" />
 
-      </p>
-      <div class="tag-list">
-        <span class="tag">Computer Vision</span>
-        <span class="tag">Python</span>
-        <span class="tag">OpenCV</span>
-        <span class="tag">Image Processing</span>
-      </div>
-    </article>
- 
-      <article class="project-card">
+          <div class="tag-list">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Python</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Image Processing</span>
+          </div>
+        </article>
+
+        <article class="project-card">
           <h3>Development of Quadruped Robot</h3>
           <p>
-           OpenQuadruped / SpotMiniMini is a low-cost, open-source quadruped robot inspired by Maurice Rahme’s work. 
-            It features a fully 3D-printed frame, 12 brushless actuators driving four 3-DOF legs, 
-            and a lightweight leg design using a pulley–belt transmission. The robot runs on a Raspberry Pi with ROS Noetic, integrates IMU sensing and wireless joystick control, 
-            and uses Bézier-curve–based gait modulation for locomotion.
+            OpenQuadruped / SpotMiniMini is a low-cost, open-source quadruped robot inspired by
+            Maurice Rahme's work. It features a fully 3D-printed frame, 12 brushless actuators
+            driving four 3-DOF legs, and a lightweight leg design using a pulley–belt transmission.
+            The robot runs on a Raspberry Pi with ROS Noetic, integrates IMU sensing and wireless
+            joystick control, and uses Bézier-curve–based gait modulation for locomotion.
           </p>
-          <img src="assets/spot_mini_mini.gif" alt="SpotMiniMini Robot - 3D scan" class="project-gif" />
+          <img src="assets/spot_mini_mini.gif" alt="SpotMiniMini Robot" class="project-gif" />
 
           <div class="tag-list">
             <span class="tag">Python</span>
             <span class="tag">C++</span>
             <span class="tag">ROS</span>
           </div>
-
         </article>
+
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Feel free to reach out if you’d like to work together or just say hi.</p>
+      <p>Feel free to reach out if you'd like to work together or just say hi.</p>
       <div class="contact-links">
         <a class="pill" href="mailto:nikolpanpap@gmail.com">email</a>
         <a class="pill" href="https://github.com/nikolpapad" target="_blank">GitHub</a>
