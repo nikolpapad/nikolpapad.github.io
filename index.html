@@ -2,449 +2,198 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Nikoleta Papadopoulou · Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-card: #020617;
-      --border: #1f2937;
-      --text: #e4e6eb;
-      --muted: #9ca3af;
-      --accent: #38bdf8;
-    }
-
-    body.light {
-      --bg: #f9fafb;
-      --bg-card: #ffffff;
-      --border: #e5e7eb;
-      --text: #111827;
-      --muted: #6b7280;
-      --accent: #0ea5e9;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    header {
-      padding: 2rem 1.5rem 1rem;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 1rem;
-      font-size: 0.9rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--muted);
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .name {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-
-    .tagline {
-      font-size: 1.1rem;
-      color: var(--muted);
-    }
-
-    main {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 1.5rem 3rem;
-    }
-
-    section {
-      margin-top: 1.5rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.5rem;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    /* Fix: full-width card spans all columns */
-    .project-card.full-width {
-      grid-column: 1 / -1;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border-radius: 0.75rem;
-      padding: 1.25rem;
-      border: 1px solid var(--border);
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-
-    .project-card p {
-      margin: 0.25rem 0;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .tag-list {
-      margin-top: 0.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .tag {
-      font-size: 0.75rem;
-      padding: 0.15rem 0.5rem;
-      border-radius: 999px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 0.75rem;
-    }
-
-    .pill {
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      font-size: 0.9rem;
-    }
-
-    #theme-toggle {
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      color: var(--text);
-      border-radius: 999px;
-      padding: 0.4rem 0.9rem;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-
-    .hero {
-      margin-top: 1rem;
-    }
-
-    .hero p {
-      max-width: 40rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .project-gif {
-      width: 65%;
-      max-width: 720px;
-      display: block;
-      margin: 0.75rem auto;
-      border-radius: 0.5rem;
-    }
-
-    .media-row {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .media-row img,
-    .media-row video {
-      height: auto;
-      border-radius: 0.5rem;
-      object-fit: contain;
-    }
-
-    .media-row .gif {
-      max-width: 550px;
-      width: 100%;
-    }
-
-    .media-row .image {
-      max-width: 250px;
-      width: 100%;
-    }
-
-    .media-row figure {
-      margin: 0;
-    }
-
-    .media-row figcaption {
-      margin-top: 0.4rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
-    .project-card h4 {
-      margin-bottom: 0.3rem;
-    }
-
-    .project-card ul {
-      margin-top: 0.2rem;
-      margin-bottom: 0.6rem;
-    }
-
-    /* About section list sits outside the p tag — give it muted color */
-    #about ul {
-      color: var(--muted);
-      padding-left: 1.5rem;
-      line-height: 1.7;
-    }
-  </style>
+  <title>Nikoleta Papadopoulou · ML &amp; AI Engineer</title>
+  <meta name="description" content="Nikoleta Papadopoulou, machine learning and AI engineer in Marseille: embedded deep learning, multi-agent generative AI and computer vision, from raw data to production." />
+  <script>
+    (function () {
+      try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script type="module" src="assets/site.js"></script>
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="cv.html">CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button id="theme-toggle" aria-label="Toggle dark mode">☀️</button>
-    </div>
-
-    <div class="hero">
-      <div class="name">Nikoleta Papadopoulou</div>
-      <div class="tagline">
-        Applied AI Engineer passionate about Deep learning, LLMs, and deploying AI solutions into production
-      </div>
-    </div>
+  <header class="topbar">
+    <a class="topbar-name" href="./">Nikoleta Papadopoulou</a>
+    <nav aria-label="Main">
+      <a class="topbar-link optional" href="#about">About</a>
+      <a class="topbar-link" href="#projects">Projects</a>
+      <a class="topbar-link" href="cv.html">CV</a>
+      <a class="topbar-link optional" href="#contact">Contact</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 9.6A5.5 5.5 0 0 1 6.4 2.5a5.5 5.5 0 1 0 7.1 7.1Z" /></svg>
+        <svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3" /><path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1 1M11.6 11.6l1 1M3.4 12.6l1-1M11.6 4.4l1-1" /></svg>
+      </button>
+    </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <!-- Fix: moved <ul> outside <p> — a block element cannot live inside an inline element -->
-      <p>
-        Hi, I'm Nikoleta, an engineer who's still figuring out exactly where she wants to go,
-        but knows she loves building things that move and models that learn.
-        During my MEng thesis in Patras, Greece I built a 3D printed quadruped robot 🐕.
-        Later, at Grenoble INP Ense3, I expanded into applications with ML, mobile robotics,
-        and computer vision.
+  <main class="page">
+    <section class="col hero rise" aria-labelledby="hero-title">
+      <p class="label" style="--i: 0">Machine Learning &amp; AI Engineer · Marseille</p>
+      <h1 id="hero-title" class="hero-title" style="--i: 1">Models that <em>learn</em>, machines that move.</h1>
+      <p class="hero-sub" style="--i: 2">
+        I take models from raw data to production: embedded deep learning,
+        multi-agent generative AI, and computer vision for real devices.
       </p>
-      <p>
-        I recently completed a Machine Learning Engineering internship at TDK InvenSense, where
-        I built and trained a Neural Network from scratch to detect tap gestures from time-series
-        accelerometer data for the development of a product feature of an IMU sensor.
-      </p>
-      <p>Currently exploring:</p>
-      <ul>
-        <li>Stable Diffusion and generative image models on Hugging Face</li>
-        <li>Fine Tuning LLMs</li>
-        <li>Learning more about the ML Infrastructure</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <!-- Project 1: full-width card (fix: added full-width CSS class definition above) -->
-      <div class="projects">
-        <article class="project-card full-width">
-          <h3>Deep Learning for Gesture Detection from IMU Time-Series</h3>
-
-          <p>
-            Designed, trained, and evaluated deep neural networks for detecting facial tap gestures
-            from raw accelerometer data. The final architecture combined
-            <strong>CNN layers</strong> for temporal feature extraction with
-            <strong>recurrent layers</strong> for sequential pattern modeling.
-          </p>
-
-          <p>
-            The dataset required extensive preprocessing, including
-            <strong>filtering, normalization, and data cleaning</strong>.
-            Event-based segmentation was applied, from data logs where users performed
-            different tap gestures across multiple use cases, both static and in-motion scenarios.
-          </p>
-
-          <p>
-            Model development was carried out using <strong>TensorFlow/Keras</strong>.
-            <strong>TensorBoard</strong> was used to monitor training dynamics,
-            tune hyperparameters, and assess the impact of regularization techniques.
-            The final model was <strong>quantized and evaluated on-device</strong>
-            using the company's internal MLtools framework.
-          </p>
-
-          <h4>Key Challenges</h4>
-          <ul>
-            <li>Highly imbalanced dataset — tap events were extremely short compared to the dominant "no-event" class</li>
-            <li>Strong inter-user variability in how facial tap gestures were performed</li>
-            <li>Data inconsistencies across different usage scenarios</li>
-            <li>Strict constraints on model size, latency, and false accept rate for embedded deployment</li>
-          </ul>
-
-          <h4>Solutions</h4>
-          <ul>
-            <li>Introduced noise-based data augmentation and imbalance-aware handling strategies</li>
-            <li>Performed extensive hyperparameter searches across architectures and window sizes</li>
-            <li>Applied multiple regularization techniques to improve generalization</li>
-            <li>Optimized the final model for robustness and memory efficiency prior to quantization</li>
-          </ul>
-
-          <div class="media-row">
-            <figure>
-              <img src="assets/tap.gif" alt="Live testing demo" class="gif">
-              <figcaption>Live on-device gesture detection demo</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/conf_matrix.PNG" alt="Confusion matrix results" class="image">
-              <figcaption>Confusion matrix of best-performing model</figcaption>
-            </figure>
-          </div>
-
-          <div class="tag-list">
-            <span class="tag">Python</span>
-            <span class="tag">TensorFlow / Keras</span>
-            <span class="tag">CNN</span>
-            <span class="tag">RNN</span>
-            <span class="tag">Time-Series</span>
-            <span class="tag">Signal Processing</span>
-            <span class="tag">Embedded ML</span>
-          </div>
-        </article>
+      <div class="hero-actions" style="--i: 3">
+        <a class="btn btn-primary" href="cv.html">Read my CV</a>
+        <a class="btn" href="#contact">Get in touch</a>
       </div>
-
-      <!-- Projects 2 & 3 side by side -->
-      <div class="projects" style="margin-top: 1.5rem;">
-
-        <!-- Fix: added the missing opening <article> tag for Arachne Studio -->
-        <article class="project-card">
-          <h3>
-            Ongoing Project:
-            <a href="https://arachne-studio.com" target="_blank" rel="noopener noreferrer">
-              Arachne Studio
-            </a>
-          </h3>
-
-          <p>
-            Arachne Studio is a passion project turned web app for preserving and digitizing vintage
-            crochet patterns from early 20th-century documents. It uses computer vision to extract
-            grid-based patterns from historical PDFs and rebuilds them into clean, editable digital grids.
-          </p>
-
-          <p>Key features:</p>
-          <ul>
-            <li>Pattern browser — catalog of pre-extracted vintage patterns with category filtering, search, and pagination</li>
-            <li>Pattern detail &amp; PDF download — configure extraction options and download a PDF with line-by-line instructions</li>
-            <li>Visual grid editor — canvas editor with brush, fill, eyedropper, rectangle select, lasso, stickers, multi-color palette, undo/redo, flip/rotate, and a magnifier</li>
-            <li>Mobile-optimized editor — pinch-to-zoom, two-finger pan, long-press eyedropper with haptic feedback</li>
-            <li>My Corner — personal dashboard of your edited patterns</li>
-            <li>Auth-gated editing — Google OAuth to save edits per-user</li>
-          </ul>
-
-          <p>The project is still in beta — usage and suggestions for improvements are very welcome!</p>
-
-          <img src="assets/arachne-demo.gif" alt="Arachne Studio Demo" class="project-gif" />
-
-          <div class="tag-list">
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Python</span>
-            <span class="tag">OpenCV</span>
-            <span class="tag">Image Processing</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <h3>Development of Quadruped Robot</h3>
-          <p>
-            OpenQuadruped / SpotMiniMini is a low-cost, open-source quadruped robot inspired by
-            Maurice Rahme's work. It features a fully 3D-printed frame, 12 brushless actuators
-            driving four 3-DOF legs, and a lightweight leg design using a pulley–belt transmission.
-            The robot runs on a Raspberry Pi with ROS Noetic, integrates IMU sensing and wireless
-            joystick control, and uses Bézier-curve–based gait modulation for locomotion.
-          </p>
-          <img src="assets/spot_mini_mini.gif" alt="SpotMiniMini Robot" class="project-gif" />
-
-          <div class="tag-list">
-            <span class="tag">Python</span>
-            <span class="tag">C++</span>
-            <span class="tag">ROS</span>
-          </div>
-        </article>
-
+      <div class="hero-art" style="--i: 4">
+        <div class="fig" data-fig="terrain" data-play data-label="A field of line-drawn pillars rising and falling like a heightmap"></div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Feel free to reach out if you'd like to work together or just say hi.</p>
-      <div class="contact-links">
-        <a class="pill" href="mailto:nikolpanpap@gmail.com">email</a>
-        <a class="pill" href="https://github.com/nikolpapad" target="_blank">GitHub</a>
-        <a class="pill" href="https://www.linkedin.com/in/nikoleta-papadopoulou-6174541a4/" target="_blank">LinkedIn</a>
+    <section id="about" class="col section">
+      <div class="section-head"><h2 class="label">About</h2></div>
+      <div class="prose">
+        <p>
+          Hi, I'm Nikoleta, an engineer who loves building things that move and models that learn.
+          During my MEng thesis in Patras, Greece, I built a 3D-printed quadruped robot. Later, at
+          Grenoble INP – Ense³, I expanded into machine learning, mobile robotics and computer vision.
+        </p>
+        <p>
+          Most recently I was a full-stack AI engineer at French POC (FPC Studio), building prototypes
+          for clients: a multi-agent generative-AI platform for Renault, a vision pipeline that measures
+          blood viscosity, bio-impedance analysis for breast-cancer screening, and offline speech
+          recognition for EDF. Before that, at TDK InvenSense, I designed and trained a neural network
+          that detects tap gestures from accelerometer data, running on the sensor itself.
+        </p>
+        <p class="muted">Currently exploring:</p>
+        <ul class="bullets muted">
+          <li>Stable Diffusion and generative image models on Hugging Face</li>
+          <li>Fine-tuning LLMs</li>
+          <li>ML infrastructure</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="col section">
+      <div class="section-head"><h2 class="label">Selected projects</h2><span class="count">03</span></div>
+
+      <article class="project">
+        <div class="project-meta"><span class="label">TDK InvenSense · 2025</span></div>
+        <h3 class="project-title">Deep learning for gesture detection from IMU time series</h3>
+        <div class="prose">
+          <p>
+            Designed, trained and evaluated deep neural networks that detect facial tap gestures from raw
+            earbud accelerometer data. The final architecture combines <strong>1D CNN layers</strong> for
+            temporal feature extraction with <strong>GRU layers</strong> for sequential patterns, reaching
+            over 92% accuracy within the embedded memory budget.
+          </p>
+          <p class="muted">
+            The data needed extensive filtering, normalisation and cleaning, then event-based segmentation
+            of logs where users tapped in static and in-motion scenarios. Models were built in
+            TensorFlow/Keras, tuned with TensorBoard, then quantised and evaluated on-device with the
+            company's internal ML tooling.
+          </p>
+        </div>
+
+        <div class="split">
+          <div>
+            <h4>Challenges</h4>
+            <ul class="bullets">
+              <li>Highly imbalanced data: taps are tiny next to the "no event" class</li>
+              <li>Strong variability in how each user taps</li>
+              <li>Inconsistent data across usage scenarios</li>
+              <li>Strict limits on model size, latency and false-accept rate</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <ul class="bullets">
+              <li>Noise augmentation and focal loss for imbalance and low SNR</li>
+              <li>Hyperparameter searches across architectures and window sizes</li>
+              <li>Several regularisation techniques for generalisation</li>
+              <li>Optimised for robustness and memory before quantisation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="media two">
+          <figure>
+            <div class="tile"><img src="assets/tap.gif" alt="Live on-device tap detection demo" loading="lazy" /></div>
+            <figcaption>Live on-device gesture detection</figcaption>
+          </figure>
+          <figure>
+            <div class="tile"><img src="assets/conf_matrix.PNG" alt="Confusion matrix of the best model" loading="lazy" /></div>
+            <figcaption>Confusion matrix of the best model</figcaption>
+          </figure>
+        </div>
+
+        <p class="tags"><span>Python</span><span>TensorFlow / Keras</span><span>CNN</span><span>GRU</span><span>Time series</span><span>Signal processing</span><span>Embedded ML</span></p>
+      </article>
+
+      <article class="project">
+        <div class="project-meta"><span class="label">Personal project · Ongoing</span></div>
+        <h3 class="project-title"><a href="https://arachne-studio.com" target="_blank" rel="noopener noreferrer">Arachne Studio</a></h3>
+        <div class="prose">
+          <p>
+            A passion project turned web app that preserves vintage crochet patterns from early
+            20th-century documents. Computer vision extracts grid patterns from scanned PDFs (line
+            detection, cell segmentation, reconstruction) and rebuilds them as clean, editable grids.
+          </p>
+          <ul class="bullets muted">
+            <li>Pattern browser with categories, search and pagination</li>
+            <li>Configurable extraction and PDF download with line-by-line instructions</li>
+            <li>Canvas grid editor: brush, fill, eyedropper, selections, stickers, palette, undo/redo</li>
+            <li>Mobile editor with pinch-to-zoom, two-finger pan and haptic eyedropper</li>
+            <li>Google sign-in to save your own edits in "My Corner"</li>
+          </ul>
+          <p class="muted">Still in beta. Feedback is very welcome!</p>
+        </div>
+        <div class="media">
+          <div class="tile"><img src="assets/arachne-demo.gif" alt="Arachne Studio editor demo" loading="lazy" /></div>
+        </div>
+        <p class="tags"><span>Python</span><span>OpenCV</span><span>FastAPI</span><span>Next.js</span><span>TypeScript</span><span>Docker</span></p>
+      </article>
+
+      <article class="project">
+        <div class="project-meta"><span class="label">MEng thesis · University of Patras</span></div>
+        <h3 class="project-title">An open-source quadruped robot</h3>
+        <div class="prose">
+          <p>
+            OpenQuadruped / SpotMiniMini is a low-cost, open-source quadruped inspired by Maurice Rahme's
+            work: a fully 3D-printed frame, 12 brushless actuators driving four 3-DOF legs, and a light
+            pulley-and-belt leg design. It runs ROS Noetic on a Raspberry Pi, with IMU sensing, wireless
+            joystick control and Bézier-curve gait modulation.
+          </p>
+        </div>
+        <div class="media">
+          <div class="tile"><img src="assets/spot_mini_mini.gif" alt="SpotMiniMini robot walking" loading="lazy" /></div>
+        </div>
+        <p class="tags"><span>Python</span><span>C++</span><span>ROS</span><span>Raspberry Pi</span><span>Teensy</span></p>
+      </article>
+    </section>
+
+    <section id="contact" class="col section">
+      <div class="section-head"><h2 class="label">Contact</h2></div>
+      <div class="contact">
+        <div>
+          <p class="project-title">Let's build something that <em class="serif">works</em>.</p>
+          <p class="muted">Reach out if you'd like to work together, or just to say hi.</p>
+          <div class="contact-links">
+            <a class="btn btn-primary" href="mailto:nikolpanpap@gmail.com">nikolpanpap@gmail.com</a>
+            <a class="btn" href="https://www.linkedin.com/in/nikoleta-papadopoulou-6174541a4/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn" href="https://github.com/nikolpapad" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="fig" data-fig="plug" data-label="A plug drawn up toward a wall socket"></div>
       </div>
     </section>
   </main>
 
-  <script>
-    const body = document.body;
-    const toggleBtn = document.getElementById("theme-toggle");
-
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light") {
-      body.classList.add("light");
-      toggleBtn.textContent = "🌙";
-    } else {
-      toggleBtn.textContent = "☀️";
-    }
-
-    toggleBtn.addEventListener("click", () => {
-      const isLight = body.classList.toggle("light");
-      if (isLight) {
-        localStorage.setItem("theme", "light");
-        toggleBtn.textContent = "🌙";
-      } else {
-        localStorage.setItem("theme", "dark");
-        toggleBtn.textContent = "☀️";
-      }
-    });
-  </script>
+  <footer class="footer">
+    <p>© 2026 Nikoleta Papadopoulou. Figures by <a href="https://hairline.lucasmarkes.com" target="_blank" rel="noopener noreferrer">Hairline</a>.</p>
+    <nav aria-label="Elsewhere">
+      <a href="cv.html">CV</a>
+      <a href="https://github.com/nikolpapad" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/nikoleta-papadopoulou-6174541a4/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </nav>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV · Nikoleta Papadopoulou</title>
+  <meta name="description" content="CV of Nikoleta Papadopoulou, machine learning and AI engineer: from model to production. In English and French." />
+  <script>
+    (function () {
+      var r = document.documentElement;
+      try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") r.dataset.theme = t; } catch (e) {}
+      var q = new URLSearchParams(location.search).get("lang"), l = null;
+      try { l = localStorage.getItem("lang"); } catch (e) {}
+      var lang = q || l || ((navigator.language || "").slice(0, 2) === "fr" ? "fr" : "en");
+      r.dataset.lang = lang === "fr" ? "fr" : "en";
+      r.lang = r.dataset.lang;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script type="module" src="assets/site.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="topbar-name" href="./">Nikoleta Papadopoulou</a>
+    <nav aria-label="Main">
+      <a class="topbar-link optional" href="./#projects">Projects</a>
+      <a class="topbar-link" href="cv.html" aria-current="page">CV</a>
+      <div class="seg" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+      </div>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 9.6A5.5 5.5 0 0 1 6.4 2.5a5.5 5.5 0 1 0 7.1 7.1Z" /></svg>
+        <svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3" /><path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1 1M11.6 11.6l1 1M3.4 12.6l1-1M11.6 4.4l1-1" /></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- ================= header ================= -->
+    <section class="col cv-head rise">
+      <div style="--i: 0">
+        <div data-i18n="en">
+          <p class="label">Curriculum vitae</p>
+          <h1 class="page-title">Machine Learning &amp; AI Engineer: from model to <em>production</em>.</h1>
+          <p class="lede">
+            AI engineer with end-to-end experience, from raw data to deployed model: embedded deep learning,
+            multi-agent generative AI, and vision and data-analysis pipelines for biomedical devices.
+          </p>
+          <p class="facts"><span>Marseille, France</span><span>Greek (EU citizen)</span><a class="link" href="mailto:nikolpanpap@gmail.com">nikolpanpap@gmail.com</a></p>
+          <div class="cv-actions">
+            <a class="btn btn-primary" href="Nikoleta_Papadopoulou_CV.pdf" download>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8.5M4.5 7 8 10.5 11.5 7M3 13.5h10" /></svg>Download PDF
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/nikoleta-papadopoulou-6174541a4/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn" href="https://github.com/nikolpapad" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div data-i18n="fr" lang="fr">
+          <p class="label">Curriculum vitae</p>
+          <h1 class="page-title">Ingénieure Data Science &amp; IA : du modèle à la <em>production</em>.</h1>
+          <p class="lede">
+            Ingénieure IA avec une expérience de bout en bout, de la donnée brute au modèle déployé :
+            deep learning embarqué, IA générative multi-agents, pipelines de vision et d'analyse de données
+            pour des dispositifs biomédicaux.
+          </p>
+          <p class="facts"><span>Marseille, France</span><span>Nationalité grecque (UE)</span><a class="link" href="mailto:nikolpanpap@gmail.com">nikolpanpap@gmail.com</a></p>
+          <div class="cv-actions">
+            <a class="btn btn-primary" href="Nikoleta_Papadopoulou_CV_FR.pdf" download>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8.5M4.5 7 8 10.5 11.5 7M3 13.5h10" /></svg>Télécharger le PDF
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/nikoleta-papadopoulou-6174541a4/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn" href="https://github.com/nikolpapad" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="fig fig-side" style="--i: 1" data-fig="branches" data-play data-label="A commit graph with a branch forking off and merging back"></div>
+    </section>
+
+    <!-- ================= experience ================= -->
+    <section id="experience" class="col section">
+      <div class="section-head">
+        <h2 class="label"><span data-i18n="en">Professional experience</span><span data-i18n="fr">Expérience professionnelle</span></h2>
+      </div>
+
+      <div data-i18n="en">
+        <article class="entry">
+          <p class="when">Apr – Jul 2026<span>Marseille / Lyon</span></p>
+          <div>
+            <h3 class="role"><span class="org">French POC (FPC Studio)</span> <span class="title">· Full-Stack AI Engineer</span></h3>
+            <p class="note">AI prototyping studio: client projects, from data to deployed prototype.</p>
+            <ul class="tree">
+              <li>
+                <h3>Renault <span class="muted">· Multi-agent generative AI platform</span></h3>
+                <ul class="bullets">
+                  <li>Built a multi-agent system (Google ADK, Gemini / Vertex AI): an orchestrator agent delegates to document-retrieval, synthetic-persona interview and web-search agents.</li>
+                  <li>Hybrid retrieval (dense vectors + BM25, RRF fusion) over LanceDB; served through a streaming FastAPI API (SSE) on Cloud Run, with Firestore persistence.</li>
+                </ul>
+              </li>
+              <li>
+                <h3>Oncelia <span class="muted">· Bio-impedance data analysis for breast-cancer screening</span></h3>
+                <ul class="bullets">
+                  <li>Validated agreement between two measurement devices (consistency, inter-patient spectral studies) and defined the artefact-exclusion rules.</li>
+                  <li>Reproducible Python analysis pipeline and review web app (Bode / Nyquist plots) producing reference profiles of healthy tissue.</li>
+                </ul>
+              </li>
+              <li>
+                <h3>Hemodynes <span class="muted">· Vision-based blood viscosity measurement</span></h3>
+                <ul class="bullets">
+                  <li>Real-time vision pipeline: meniscus segmentation and tracking on video (Raspberry Pi camera), apparent-viscosity computation, adaptive pressure control.</li>
+                  <li>Python / OpenCV prototype ported to Rust and cross-compiled for Raspberry Pi 5.</li>
+                </ul>
+              </li>
+              <li>
+                <h3>EDF SmartAccess <span class="muted">· Offline speech recognition</span></h3>
+                <ul class="bullets">
+                  <li>Benchmarked on-device speech-recognition models (accuracy, latency, memory); selected NVIDIA Parakeet 0.6B for bilingual FR/EN inference on mobile.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">Feb – Jul 2025<span>Grenoble</span></p>
+          <div>
+            <h3 class="role"><span class="org">TDK InvenSense</span> <span class="title">· Machine Learning Engineer (Master's thesis internship)</span></h3>
+            <ul class="bullets">
+              <li>1D CNN + GRU tap-detection models on earbud accelerometer signals; noise augmentation and focal loss for low SNR and inter-user variability; accuracy above 92% within embedded memory.</li>
+              <li>Preprocessing pipeline, GPU training (CUDA / cuDNN) and deployment for real-time on-device inference, with the embedded ML team.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div data-i18n="fr" lang="fr">
+        <article class="entry">
+          <p class="when">avr. – juil. 2026<span>Marseille / Lyon</span></p>
+          <div>
+            <h3 class="role"><span class="org">French POC (FPC Studio)</span> <span class="title">· Ingénieure IA Fullstack</span></h3>
+            <p class="note">Cabinet de prototypage IA : projets clients, de la donnée au prototype déployé.</p>
+            <ul class="tree">
+              <li>
+                <h3>Renault <span class="muted">· Plateforme multi-agents d'IA générative</span></h3>
+                <ul class="bullets">
+                  <li>Développement d'un système multi-agents (Google ADK, Gemini / Vertex AI) : un agent orchestrateur délègue à des agents de recherche documentaire, d'entretien avec des personas synthétiques et de recherche web.</li>
+                  <li>Recherche hybride (vectorielle + BM25, fusion RRF) sur une base LanceDB ; service exposé via une API FastAPI en streaming (SSE), déployé sur Cloud Run, persistance Firestore.</li>
+                </ul>
+              </li>
+              <li>
+                <h3>Oncelia <span class="muted">· Analyse de données de bio-impédance (dépistage du cancer du sein)</span></h3>
+                <ul class="bullets">
+                  <li>Validation de la concordance entre deux appareils (cohérence, études spectrales inter-patients) et définition des règles d'exclusion d'artefacts.</li>
+                  <li>Pipeline Python d'analyse reproductible et application web de revue (diagrammes de Bode / Nyquist) produisant les profils de référence de tissu sain.</li>
+                </ul>
+              </li>
+              <li>
+                <h3>Hemodynes <span class="muted">· Mesure de viscosité sanguine par vision</span></h3>
+                <ul class="bullets">
+                  <li>Pipeline de vision temps réel : segmentation et suivi du ménisque sur vidéo (caméra Raspberry Pi), calcul de la viscosité apparente, régulation de pression adaptative.</li>
+                  <li>Prototype Python / OpenCV porté en Rust et cross-compilé pour Raspberry Pi 5.</li>
+                </ul>
+              </li>
+              <li>
+                <h3>EDF SmartAccess <span class="muted">· Reconnaissance vocale hors ligne</span></h3>
+                <ul class="bullets">
+                  <li>Benchmark de modèles de reconnaissance vocale embarqués (précision, latence, mémoire) : sélection de NVIDIA Parakeet 0.6B pour l'inférence bilingue FR/EN sur mobile.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="when">févr. – juil. 2025<span>Grenoble</span></p>
+          <div>
+            <h3 class="role"><span class="org">TDK InvenSense</span> <span class="title">· Ingénieure Machine Learning (stage de fin d'études)</span></h3>
+            <ul class="bullets">
+              <li>Modèles 1D CNN + GRU de détection de tapotements (accéléromètre d'écouteur) ; augmentation de bruit et focal loss face au faible SNR et à la variabilité inter-utilisateurs ; accuracy &gt; 92 % en mémoire embarquée.</li>
+              <li>Pipeline de prétraitement, entraînement GPU (CUDA / cuDNN) et déploiement pour l'inférence temps réel sur l'appareil, avec l'équipe ML embarqué.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= personal project ================= -->
+    <section id="project" class="col section">
+      <div class="section-head">
+        <h2 class="label"><span data-i18n="en">Personal project</span><span data-i18n="fr">Projet personnel</span></h2>
+      </div>
+      <article class="entry">
+        <p class="when"><a class="link" href="https://arachne-studio.com" target="_blank" rel="noopener noreferrer">arachne-studio.com</a></p>
+        <div>
+          <div data-i18n="en">
+            <h3 class="role"><span class="org">Arachne Studio</span> <span class="title">· Computer vision platform in production</span></h3>
+            <ul class="bullets">
+              <li>Grid digitisation from scanned documents from the 1910s: line detection, cell segmentation, reconstruction (Python, OpenCV).</li>
+              <li>FastAPI API and Next.js / TypeScript editor, deployed on a VPS (Docker, Nginx, SSL, JWT authentication).</li>
+            </ul>
+          </div>
+          <div data-i18n="fr" lang="fr">
+            <h3 class="role"><span class="org">Arachne Studio</span> <span class="title">· Plateforme de vision par ordinateur en production</span></h3>
+            <ul class="bullets">
+              <li>Numérisation de grilles à partir de documents scannés des années 1910 : détection de lignes, segmentation de cellules, reconstruction (Python, OpenCV).</li>
+              <li>API FastAPI, éditeur Next.js / TypeScript ; déployée sur VPS (Docker, Nginx, SSL, authentification JWT).</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= education ================= -->
+    <section id="education" class="col section">
+      <div class="section-head">
+        <h2 class="label"><span data-i18n="en">Education</span><span data-i18n="fr">Formation</span></h2>
+      </div>
+
+      <div data-i18n="en">
+        <article class="entry">
+          <p class="when">2024 – 2025<span>Grenoble</span></p>
+          <div>
+            <h3 class="role"><span class="org">Grenoble INP – Ense³, Université Grenoble Alpes</span></h3>
+            <p class="note">MSc (M2) Information Systems Technologies (TSI), MARS track: mobile, autonomous and robotic systems. Machine-learning pose-estimation project.</p>
+          </div>
+        </article>
+        <article class="entry">
+          <p class="when">2017 – 2023<span>Patras, Greece</span></p>
+          <div>
+            <h3 class="role"><span class="org">University of Patras</span></h3>
+            <p class="note">Diploma in Mechanical Engineering (5-year integrated Master's).</p>
+            <ul class="bullets"><li>Thesis: low-cost open-source quadruped robot (ROS, Raspberry Pi, Teensy, IMU).</li></ul>
+          </div>
+        </article>
+      </div>
+
+      <div data-i18n="fr" lang="fr">
+        <article class="entry">
+          <p class="when">2024 – 2025<span>Grenoble</span></p>
+          <div>
+            <h3 class="role"><span class="org">Grenoble INP – Ense³, Université Grenoble Alpes</span></h3>
+            <p class="note">M2 Technologies des Systèmes d'Information (TSI), parcours MARS : systèmes mobiles, autonomes et robotiques. Projet d'estimation de pose par apprentissage automatique.</p>
+          </div>
+        </article>
+        <article class="entry">
+          <p class="when">2017 – 2023<span>Patras, Grèce</span></p>
+          <div>
+            <h3 class="role"><span class="org">Université de Patras</span></h3>
+            <p class="note">Diplôme d'ingénieur en génie mécanique (5 ans, grade Master).</p>
+            <ul class="bullets"><li>Mémoire : robot quadrupède open source à bas coût (ROS, Raspberry Pi, Teensy, IMU).</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= skills ================= -->
+    <section id="skills" class="col section">
+      <div class="section-head">
+        <h2 class="label"><span data-i18n="en">Skills &amp; languages</span><span data-i18n="fr">Compétences &amp; langues</span></h2>
+      </div>
+
+      <table class="skills" data-i18n="en">
+        <tr><th>AI &amp; Data Science</th><td>Machine learning, deep learning (CNN, RNN / GRU), generative AI (LLM, RAG, multi-agent systems), computer vision, signal processing</td></tr>
+        <tr><th>Python</th><td>Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow / Keras, OpenCV</td></tr>
+        <tr><th>Data</th><td>SQL, NoSQL (Firestore), vector databases (LanceDB), hybrid search</td></tr>
+        <tr><th>Development &amp; APIs</th><td>FastAPI, Rust, C++, TypeScript / Next.js</td></tr>
+        <tr><th>DevOps / MLOps</th><td>Docker, Git, Linux, Google Cloud (Cloud Run, Vertex AI), CUDA</td></tr>
+        <tr><th>Languages</th><td>Greek (native), English (C2), French (C1)</td></tr>
+      </table>
+
+      <table class="skills" data-i18n="fr" lang="fr">
+        <tr><th>IA &amp; Data Science</th><td>Machine learning, deep learning (CNN, RNN / GRU), IA générative (LLM, RAG, systèmes multi-agents), vision par ordinateur, traitement du signal</td></tr>
+        <tr><th>Python</th><td>Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow / Keras, OpenCV</td></tr>
+        <tr><th>Données</th><td>SQL, NoSQL (Firestore), bases vectorielles (LanceDB), recherche hybride</td></tr>
+        <tr><th>Développement &amp; API</th><td>FastAPI, Rust, C++, TypeScript / Next.js</td></tr>
+        <tr><th>DevOps / MLOps</th><td>Docker, Git, Linux, Google Cloud (Cloud Run, Vertex AI), CUDA</td></tr>
+        <tr><th>Langues</th><td>Grec (langue maternelle), anglais (C2), français (C1)</td></tr>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Nikoleta Papadopoulou. Figures by <a href="https://hairline.lucasmarkes.com" target="_blank" rel="noopener noreferrer">Hairline</a>.</p>
+    <nav aria-label="Elsewhere">
+      <a href="./">Home</a>
+      <a href="https://github.com/nikolpapad" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/nikoleta-papadopoulou-6174541a4/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </nav>
+  </footer>
+</body>
+</html>
